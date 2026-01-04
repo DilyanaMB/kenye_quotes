@@ -1,11 +1,10 @@
 from tkinter import *
-
+import requests
 
 def get_quote():
-    pass
-    #Write your code here.
-
-
+   response = requests.get("https://api.kanye.rest")
+   quote = response.json()
+   print(response)
 
 window = Tk()
 window.title("Kanye Says...")
